@@ -1,0 +1,23 @@
+{
+  "language": "SK",
+  "tableHeaders": {
+    "mission": "Misia",
+    "rocket": "Raketa",
+    "launch": "Štart",
+    "status": "Úspech"
+  },
+  "missionStatus": {
+    "successful": "Úspešná",
+    "unsuccessful": "Neúspešná"
+  },
+  "missionDetails": {
+    "title": "Detail misie {{mission}}"
+  },
+  "buttons": {
+    "close": "Zatvoriť"
+  },
+  "titles": {
+    "settings": "Nastavenia",
+    "table": "Štarty rakiet SpaceX"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "language": "EN",
+  "tableHeaders": {
+    "mission": "Mission",
+    "rocket": "Rocket",
+    "launch": "Launch",
+    "status": "Status"
+  },
+  "missionStatus": {
+    "successful": "Successful",
+    "unsuccessful": "Unsuccessful"
+  },
+  "missionDetails": {
+    "title": "{{mission}} mission detail"
+  },
+  "buttons": {
+    "close": "Close"
+  },
+  "titles": {
+    "settings": "Settings",
+    "table": "SpaceX rocket launches"
+  }
+}
