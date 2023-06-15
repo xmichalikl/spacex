@@ -17,7 +17,7 @@ const HeaderCol = styled.th`
 
   padding-bottom: 10px;
   &:first-child {
-    width: 50%;
+    width: 40%;
   }
 `;
 

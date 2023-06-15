@@ -36,19 +36,27 @@ function SpacexRow({ mission, openDetails }: SpacexRowProps) {
   const { name, rocket, launch, status } = mission;
 
   function launchStatus() {
-    return status ? `✔ ${t('missionStatus.successful')}` : `✖ ${t('missionStatus.unsuccessful')}`;
+    if (status === true) return `✔ ${t('missionStatus.successful')}`;
+    if (status === false) return `✖ ${t('missionStatus.unsuccessful')}`;
+    else return `${t('missionStatus.unknown')}`;
+  }
+
+  function launchStatusColor() {
+    if (status === true) return '#14850c';
+    if (status === false) return '#f7665e';
+    else return '#424345';
   }
 
   return (
     <BodyRow onClick={() => openDetails(mission)}>
       {tableContext.showMission ? <BodyCol>{name}</BodyCol> : null}
       {tableContext.showRocket ? <BodyCol>{rocket}</BodyCol> : null}
-      {tableContext.showLaunch ? <BodyCol>{launch.toLocaleDateString()}</BodyCol> : null}
+      {tableContext.showLaunch ? (
+        <BodyCol>{launch ? launch.toLocaleDateString() : '-'}</BodyCol>
+      ) : null}
       {tableContext.showStatus ? (
         <BodyCol>
-          <Status style={{ backgroundColor: status ? '#14850c' : '#f7665e' }}>
-            {launchStatus()}
-          </Status>
+          <Status style={{ backgroundColor: launchStatusColor() }}>{launchStatus()}</Status>
         </BodyCol>
       ) : null}
     </BodyRow>

@@ -55,7 +55,15 @@ function SpacexDetails({ mission, showModal, closeModal }: SpacexDetailsProps) {
   return (
     <Modal style={{ display: showModal ? 'block' : 'none' }}>
       <ModalContent>
-        <h2>{t('missionDetails.title', { mission: mission.name })}</h2>
+        <div>
+          <h2>
+            {t('missionDetails.title', { mission: mission.name })}{' '}
+            {mission.detailUrl ? (
+              <img src={mission.detailUrl} alt="Img" style={{ height: '1em' }} />
+            ) : null}
+          </h2>
+        </div>
+
         <YouTube videoId="_krgcofiM6M" opts={opts} />
         <ModalControls>
           <Button onClick={closeModal}>{t('buttons.close')}</Button>

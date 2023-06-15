@@ -8,7 +8,8 @@
   },
   "missionStatus": {
     "successful": "Successful",
-    "unsuccessful": "Unsuccessful"
+    "unsuccessful": "Unsuccessful",
+    "unknown": "Unknown"
   },
   "missionDetails": {
     "title": "{{mission}} mission detail"

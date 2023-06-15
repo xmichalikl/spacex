@@ -8,7 +8,8 @@
   },
   "missionStatus": {
     "successful": "Úspešná",
-    "unsuccessful": "Neúspešná"
+    "unsuccessful": "Neúspešná",
+    "unknown": "Neznámy"
   },
   "missionDetails": {
     "title": "Detail misie {{mission}}"
